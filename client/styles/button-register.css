@@ -1,48 +1,70 @@
+:root {
+  --main: #151515;
+}
+
 .register-button {
   position: relative;
   display: inline-block;
-  padding: 12px 24px;
+  padding: 16px 24px;
   font-size: 16px;
   text-align: center;
   color: #fff;
   background-color: none;
   border: none;
   cursor: pointer;
+  /* animation-duration: 200; */
 }
 
 .register-button::before {
   content: "";
   position: absolute;
-  left: 10px;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: 2px solid #007bff;
+  left: 0px;
+  top: 0px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
 }
 .register-button::after {
   content: "";
   position: absolute;
-  left: -10px;
-  top: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid #007bff;
+  left: 4px;
+  top: 4px;
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
 }
 
 .register-button::before {
-  z-index: -1;
-  transform: translate(6px, 6px);
-}
-.register-button::after {
   z-index: 2;
   transform: translate(6px, 6px);
 }
+.register-button::after {
+  z-index: 3;
+  transform: translate(-6px, -6px);
+}
 
 .register-button:hover {
-  background-color: #0062cc;
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: var(--main);
 }
 
 .register-button:hover::before,
 .register-button:hover::after {
-  border-color: #0062cc;
+  /* border-color: white; */
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  /* border-radius: 8px; */
+}
+
+.register-button__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
 }
