@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chep-studio-cms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chep-studio-cms
+  template:
+    metadata:
+      labels: app:chep-studio-cms
+    spec:
+      containers:
+        - name: your-container-name
+          image: your-image-name
+          ports:
+            - containerPort: 1337
