@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "completed_date": {
+      "type": "datetime"
+    },
+    "area": {
+      "required": true,
+      "type": "biginteger",
+      "min": "0"
+    },
+    "address": {
+      "type": "text"
+    },
+    "summary": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "DesignAndContruction",
+        "Design"
+      ],
+      "required": true,
+      "default": "Design"
+    },
+    "topic": {
+      "type": "enumeration",
+      "enum": [
+        "FAndB",
+        "Fashion",
+        "TownHouse",
+        "BeautyService",
+        "Villa"
+      ]
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": false
+    },
+    "is_highlight": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "cover_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "highlight_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}
