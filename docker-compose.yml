@@ -1,0 +1,19 @@
+version: "1"
+services:
+  strapi:
+    image: strapi/strapi
+    restart: always
+    ports:
+      - 1337:1337
+    volumes:
+      - ./app:/usr/src/api
+    environment:
+      - HOST=0.0.0.0
+      - PORT=1337
+      - APP_KEYS=PMvU6wBiCuoYA4IyIrImDQ==,6cdcAW3KjBGcva21/Pg1kA==,YLpg+u5UWwg/ROCl43vLHQ==,UyxXCtZYLZHzLc9rgBiGQQ==
+      - API_TOKEN_SALT=UqVBEPXMggT4q8m37YiWXQ==
+      - ADMIN_JWT_SECRET=IXwVSovEepURqcUQ3KViZw==
+      - TRANSFER_TOKEN_SALT=R0gNHlt3oE7Mz0B4W9YAXQ==
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=.tmp/data.db
+      - JWT_SECRET=Gw9TCkWLwhmXHguZXe83WA==
