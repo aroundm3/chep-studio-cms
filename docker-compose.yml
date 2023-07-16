@@ -1,12 +1,17 @@
-version: "1"
+version: "3"
+
 services:
-  strapi:
-    image: strapi/strapi
-    restart: always
+  cms:
+    container_name: strapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: |
+      sh -c  "pwd && yarn && yarn build && yarn start"
     ports:
       - 1337:1337
     volumes:
-      - ./app:/usr/src/api
+      - ./:/app
     environment:
       - HOST=0.0.0.0
       - PORT=1337
