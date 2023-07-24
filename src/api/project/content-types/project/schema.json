@@ -29,9 +29,9 @@
       "type": "richtext",
       "required": true
     },
-    "category": {
+    "categories": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "projects"
     },
